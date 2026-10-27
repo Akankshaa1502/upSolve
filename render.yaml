@@ -1,0 +1,24 @@
+# Render Blueprint: one free web service that serves both the API and the built React app.
+# Deploy: https://render.com/deploy?repo=<this repo's GitHub URL>
+services:
+  - type: web
+    name: upsolve
+    runtime: node
+    plan: free
+    # --include=dev: Vite (client build) is a devDependency and NODE_ENV=production would skip it.
+    buildCommand: npm install --prefix server --include=dev && npm install --prefix client --include=dev && npm run build --prefix client
+    startCommand: npm start --prefix server
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "22"
+      - key: JWT_SECRET
+        generateValue: true
+      # "memory" = built-in demo database (resets when the free instance restarts or sleeps).
+      # For persistent accounts, replace with a MongoDB Atlas connection string in the Render dashboard.
+      - key: MONGO_URI
+        value: memory
+      - key: SEED_ON_START
+        value: "true"
