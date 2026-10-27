@@ -42,7 +42,7 @@ export default function Login() {
     <div className="auth-page">
       <div>
         <div className="auth-hero">
-          <h1><span className="kw">upsolve</span><span className="punc">.</span><span className="fn">coach</span><span className="punc">()</span></h1>
+          <h1><span className="kw">upSolve</span><span className="punc">.</span><span className="fn">coach</span><span className="punc">()</span></h1>
           <p className="sub"><span className="cm">// </span>track every problem · find weak topics · revisit what you missed<span className="caret" aria-hidden /></p>
         </div>
         <div className="auth-card card">

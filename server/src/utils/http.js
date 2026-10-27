@@ -49,7 +49,7 @@ export async function fetchJson(url, options = {}) {
     try {
       const res = await fetch(url, {
         method,
-        headers: { 'User-Agent': 'upsolve/1.0 (competitive programming coach)', ...headers },
+        headers: { 'User-Agent': 'upSolve/1.0 (competitive programming coach)', ...headers },
         body,
         signal: AbortSignal.timeout(timeoutMs),
       });

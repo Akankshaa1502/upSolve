@@ -12,7 +12,7 @@ async function main() {
     await seedDemo({ log: console.log });
   }
 
-  const server = createApp().listen(env.port, () => console.log(`upsolve API listening on http://localhost:${env.port}`));
+  const server = createApp().listen(env.port, () => console.log(`upSolve API listening on http://localhost:${env.port}`));
 
   const shutdown = async () => {
     server.close();

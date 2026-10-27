@@ -2,7 +2,7 @@
 # Deploy: https://render.com/deploy?repo=<this repo's GitHub URL>
 services:
   - type: web
-    name: upsolve
+    name: upSolve
     runtime: node
     plan: free
     # --include=dev: Vite (client build) is a devDependency and NODE_ENV=production would skip it.

@@ -1,4 +1,7 @@
-# upsolve — project notes for Claude
+# upSolve — project notes for Claude
+
+Brand name is **upSolve** (capital S) in all user-facing text. npm package names, the demo email
+(`demo@upsolve.dev`), DB name, localStorage key and RNG seeds stay lowercase on purpose.
 
 A competitive-programming coach: imports solved/attempted problems from Codeforces, LeetCode and
 AtCoder (plus manual entries from any platform), scores weak topics, recommends 3 problems a day and

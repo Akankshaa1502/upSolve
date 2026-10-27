@@ -19,7 +19,7 @@ function Shell({ children }) {
         <div className="topbar-inner">
           <NavLink to="/" className="brand">
             <span className="brand-mark" aria-hidden>↑</span>
-            <span>upsolve<span className="punc">()</span></span>
+            <span>upSolve<span className="punc">()</span></span>
           </NavLink>
           <nav className="nav">
             <NavLink to="/" end>dashboard</NavLink>

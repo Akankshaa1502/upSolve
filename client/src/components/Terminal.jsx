@@ -1,9 +1,9 @@
-/** Page heading in the code style: `upsolve.dashboard()` + a `// comment` subtitle with a blinking caret. */
+/** Page heading in the code style: `upSolve.dashboard()` + a `// comment` subtitle with a blinking caret. */
 export function PageTitle({ name, children }) {
   return (
     <div className="page-title">
       <h1>
-        <span className="kw">upsolve</span><span className="punc">.</span><span className="fn">{name}</span><span className="punc">()</span>
+        <span className="kw">upSolve</span><span className="punc">.</span><span className="fn">{name}</span><span className="punc">()</span>
       </h1>
       {children && (
         <p className="sub"><span className="cm">//</span>{children}<span className="caret" aria-hidden /></p>

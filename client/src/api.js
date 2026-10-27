@@ -1,5 +1,5 @@
 /**
- * Thin fetch wrapper around the upsolve API. Every response is { ok, data } or { ok:false, error };
+ * Thin fetch wrapper around the upSolve API. Every response is { ok, data } or { ok:false, error };
  * failures are thrown as ApiError so pages can show error.message.
  */
 const BASE = import.meta.env.VITE_API_URL || '';

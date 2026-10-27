@@ -1,6 +1,6 @@
-# upsolve
+# upSolve
 
-A competitive programming coach. upsolve keeps track of every problem you've solved or attempted on
+A competitive programming coach. upSolve keeps track of every problem you've solved or attempted on
 Codeforces, LeetCode, AtCoder and any other site you log by hand. From that history it:
 
 - finds your **weak topics** with a weakness score per topic,
@@ -15,7 +15,7 @@ Codeforces, LeetCode, AtCoder and any other site you log by hand. From that hist
 
 <!-- Screenshots show the seeded demo account. Replace with your own as the project evolves. -->
 
-The UI uses a dark "terminal" theme: JetBrains Mono headings written like code (`upsolve.dashboard()`),
+The UI uses a dark "terminal" theme: JetBrains Mono headings written like code (`upSolve.dashboard()`),
 `// comment` labels, and window-style cards. Chart colours were checked for colour-blind
 separation and contrast against the dark surface.
 
@@ -93,7 +93,7 @@ This runs 51 tests with Node's built-in test runner:
 ## Architecture
 
 ```
-upsolve/
+upSolve/
 ├── server/                     Node.js + Express 5 + Mongoose
 │   ├── src/
 │   │   ├── app.js              Express app (routes, security middleware, error envelope)
@@ -203,7 +203,7 @@ Every response uses the same envelope: `{ ok: true, data }` or
 
 **One click on Render (free).** The repo includes a [`render.yaml`](render.yaml) blueprint:
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Akankshaa1502/upsolve)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Akankshaa1502/upSolve)
 
 By default it uses the built-in demo database (`MONGO_URI=memory`). The demo account always works,
 but new sign-ups are lost whenever the free instance sleeps (after 15 idle minutes) or restarts. For
