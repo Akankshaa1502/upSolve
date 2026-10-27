@@ -159,6 +159,9 @@ p { margin: 0.25rem 0 0; }
 }
 @media (max-width: 560px) {
   .user-email { display: none; }
+  .topbar-inner { gap: 8px 12px; }
+  .user { margin-left: auto; }
+  .nav { order: 3; flex-basis: 100%; flex-wrap: nowrap; overflow-x: auto; }
   .stat-value { font-size: 1.5rem; }
   h1 { font-size: 1.35rem; }
 }
