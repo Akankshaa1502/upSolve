@@ -3,6 +3,8 @@ dist/
 .env
 .env.*
 !.env.example
+# env examples live in server/ and client/; a root copy is never read
+/.env.example
 *.log
 coverage/
 .DS_Store
