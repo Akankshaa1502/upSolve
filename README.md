@@ -9,13 +9,15 @@ Codeforces, LeetCode, AtCoder and any other site you log by hand. From that hist
 
 ![Dashboard](docs/screenshots/dashboard.png)
 
-| Revisit queue | Log a problem | Accounts |
-|---|---|---|
-| ![Revisit](docs/screenshots/revisit.png) | ![Problems](docs/screenshots/problems.png) | ![Accounts](docs/screenshots/accounts.png) |
+| Login | Revisit queue | Log a problem | Accounts |
+|---|---|---|---|
+| ![Login](docs/screenshots/login.png) | ![Revisit](docs/screenshots/revisit.png) | ![Problems](docs/screenshots/problems.png) | ![Accounts](docs/screenshots/accounts.png) |
 
 <!-- Screenshots show the seeded demo account. Replace with your own as the project evolves. -->
 
-Dark mode follows the OS setting: [screenshot](docs/screenshots/dashboard-dark.png).
+The UI uses a dark "terminal" theme: JetBrains Mono headings written like code (`upsolve.dashboard()`),
+`// comment` labels, and window-style cards. Chart colours were checked for colour-blind
+separation and contrast against the dark surface.
 
 ---
 

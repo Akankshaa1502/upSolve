@@ -18,17 +18,18 @@ function Shell({ children }) {
       <header className="topbar">
         <div className="topbar-inner">
           <NavLink to="/" className="brand">
-            <span className="brand-mark" aria-hidden>↑</span> upsolve
+            <span className="brand-mark" aria-hidden>↑</span>
+            <span>upsolve<span className="punc">()</span></span>
           </NavLink>
           <nav className="nav">
-            <NavLink to="/" end>Dashboard</NavLink>
-            <NavLink to="/revisit">Revisit</NavLink>
-            <NavLink to="/problems">Problems</NavLink>
-            <NavLink to="/accounts">Accounts</NavLink>
+            <NavLink to="/" end>dashboard</NavLink>
+            <NavLink to="/revisit">revisit</NavLink>
+            <NavLink to="/problems">problems</NavLink>
+            <NavLink to="/accounts">accounts</NavLink>
           </nav>
           <div className="user">
-            <span className="muted user-email">{user.email}</span>
-            <button className="btn ghost sm" onClick={signOut}>Log out</button>
+            <span className="muted user-email mono small">{user.email}</span>
+            <button className="btn sm" onClick={signOut}>Log out</button>
           </div>
         </div>
       </header>

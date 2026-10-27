@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { tz } from '../api.js';
 import { useApi } from '../hooks.js';
 import ReviewItem from '../components/ReviewItem.jsx';
+import { PageTitle } from '../components/Terminal.jsx';
 
 const SCOPES = [
   ['due', 'Due today'],
@@ -22,10 +23,7 @@ export default function Revisit() {
   return (
     <div className="stack-lg">
       <div className="page-head">
-        <div>
-          <h1>Revisit</h1>
-          <p className="muted">Spaced repetition: a problem returns after 1, 3, 7 and 21 days. "Solved it" moves it to the next step, "Still stuck" starts over at 1 day.</p>
-        </div>
+        <PageTitle name="revisit"> spaced repetition: back after 1, 3, 7 and 21 days. "Still stuck" restarts at 1 day</PageTitle>
       </div>
       <div className="tabs" role="tablist">
         {SCOPES.map(([key, label]) => (

@@ -4,6 +4,7 @@ import { api, describeError } from '../api.js';
 import { STATUS_LABELS, formatDate, useApi } from '../hooks.js';
 import AddProblemForm from '../components/AddProblemForm.jsx';
 import ProblemLink, { DifficultyBadge, PlatformBadge } from '../components/ProblemLink.jsx';
+import { PageTitle } from '../components/Terminal.jsx';
 
 function AttemptRow({ attempt, onChange }) {
   const [busy, setBusy] = useState(false);
@@ -84,7 +85,7 @@ export default function Problems() {
   return (
     <div className="stack-lg">
       <div className="page-head">
-        <h1>Problems</h1>
+        <PageTitle name="problems"> everything you've solved, attempted or given up on</PageTitle>
         {!showForm && <button className="btn primary" onClick={() => setShowForm(true)}>+ Log a problem</button>}
       </div>
       {showForm && <AddProblemForm onSaved={reload} onCancel={closeForm} />}

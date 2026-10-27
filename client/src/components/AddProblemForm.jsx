@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { api, describeError } from '../api.js';
+import { TermBar } from './Terminal.jsx';
 
 const today = () => {
   const d = new Date();
@@ -49,7 +50,8 @@ export default function AddProblemForm({ onSaved, onCancel }) {
 
   return (
     <form className="card form-grid" onSubmit={submit}>
-      <div className="card-head full"><h2>Log a problem</h2></div>
+      <TermBar cmd="log()" comment="any platform: CSES, CodeChef, Kattis…" />
+      <div className="card-head full"><h2>log a problem</h2></div>
       <label>Platform*
         <input list="platforms" required maxLength={40} value={form.platform} onChange={set('platform')} placeholder="e.g. CSES" />
         <datalist id="platforms">{PLATFORM_SUGGESTIONS.map((p) => <option key={p} value={p} />)}</datalist>

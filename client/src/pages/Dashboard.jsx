@@ -7,6 +7,7 @@ import Heatmap from '../components/Heatmap.jsx';
 import TopicTable from '../components/TopicTable.jsx';
 import ReviewItem from '../components/ReviewItem.jsx';
 import ProblemLink, { PlatformBadge } from '../components/ProblemLink.jsx';
+import { PageTitle, TermBar } from '../components/Terminal.jsx';
 
 function Stat({ label, value, sub }) {
   return (
@@ -22,8 +23,9 @@ function Recommendations() {
   const { data, error, loading } = useApi('/recommendations/today', { tz });
   return (
     <section className="card">
+      <TermBar cmd="recommend()" comment="weak topics, slight stretch" />
       <div className="card-head">
-        <h2>Today's 3 problems</h2>
+        <h2>today's 3 problems</h2>
         {data && <span className="muted small">Target {data.target.min}–{data.target.max}</span>}
       </div>
       {loading && <p className="muted">Picking problems…</p>}
@@ -57,8 +59,9 @@ function DueToday() {
   const reviews = data?.reviews ?? [];
   return (
     <section className="card">
+      <TermBar cmd="revisit()" comment="1 · 3 · 7 · 21 days" />
       <div className="card-head">
-        <h2>Due today</h2>
+        <h2>due today</h2>
         <Link to="/revisit" className="small">Open queue →</Link>
       </div>
       {loading && !data && <p className="muted">Loading…</p>}
@@ -84,7 +87,7 @@ export default function Dashboard() {
   return (
     <div className="stack-lg">
       <div className="page-head">
-        <h1>Dashboard</h1>
+        <PageTitle name="dashboard"> your competitive programming coach</PageTitle>
         <Link to="/problems?add=1" className="btn primary">+ Log a problem</Link>
       </div>
 
@@ -109,7 +112,7 @@ export default function Dashboard() {
 
       <section className="card">
         <div className="card-head">
-          <h2>Activity</h2>
+          <h2>activity</h2>
           <span className="muted small">Last 12 months</span>
         </div>
         <Heatmap days={heatmap} />
@@ -118,7 +121,7 @@ export default function Dashboard() {
       <div className="grid-2 wide-left">
         <section className="card">
           <div className="card-head">
-            <h2>Topic strength</h2>
+            <h2>topic strength</h2>
             <span className="muted small">0–100, higher is stronger</span>
           </div>
           {weakest.length > 0 && (
@@ -127,14 +130,14 @@ export default function Dashboard() {
           <TopicChart topics={topics} />
         </section>
         <section className="card">
-          <div className="card-head"><h2>By platform</h2></div>
+          <div className="card-head"><h2>by platform</h2></div>
           <PlatformChart platforms={platforms} />
         </section>
       </div>
 
       <section className="card">
         <div className="card-head">
-          <h2>All topics</h2>
+          <h2>all topics</h2>
           <span className="muted small">Weakness blends solve rate (50%), failures (30%) and time since practice (20%)</span>
         </div>
         <TopicTable topics={topics} />

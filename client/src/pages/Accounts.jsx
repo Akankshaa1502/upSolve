@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { api, describeError } from '../api.js';
 import { formatDate, useApi } from '../hooks.js';
+import { PageTitle, TermBar } from '../components/Terminal.jsx';
 
 const PLATFORMS = [
   { id: 'codeforces', name: 'Codeforces', placeholder: 'e.g. tourist', note: 'Full submission history via the official API.' },
@@ -61,6 +62,7 @@ function PlatformCard({ platform, account, onChange }) {
   const [label, tone] = STATUS[account?.status] ?? ['Not connected', ''];
   return (
     <section className="card account-card">
+      <TermBar cmd={`${platform.id}.sync()`} />
       <div className="card-head">
         <h2>{platform.name}</h2>
         <span className={`pill ${tone}`}>{account ? label : 'Not connected'}</span>
@@ -105,10 +107,7 @@ export default function Accounts() {
   return (
     <div className="stack-lg">
       <div className="page-head">
-        <div>
-          <h1>Accounts</h1>
-          <p className="muted">Connect public handles to import solved and attempted problems. Only public data is read; no passwords needed. Syncing again never creates duplicates.</p>
-        </div>
+        <PageTitle name="accounts"> connect public handles. No passwords, and re-syncing never duplicates</PageTitle>
       </div>
       {error && <div className="alert error">{error.message}</div>}
       <div className="grid-3">
