@@ -1,5 +1,7 @@
 # upSolve
 
+**Demo video:** [Watch on Google Drive](https://drive.google.com/file/d/1rKiNAlDhkxWnnDZ3Z0YnA4SKFZz8k_Oq/view?usp=sharing) · **Live app:** https://upsolve.onrender.com
+
 A competitive programming coach. upSolve keeps track of every problem you've solved or attempted on
 Codeforces, LeetCode, AtCoder and any other site you log by hand. From that history it:
 
